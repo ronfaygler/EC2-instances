@@ -1,7 +1,5 @@
 import request from 'supertest';
 import app from '../server';
-// import AWS from 'aws-sdk'; // Import AWS module explicitly
-// import cheerio from 'cheerio';
 const cheerio = require('cheerio');
 
 
@@ -106,20 +104,4 @@ describe('GET /instances', () => {
     expect(isValidRegion).toBe(true);
   });
 
-}); 
-
-
-// it('should handle errors and return an error message', async () => {
-//   // Mocking an error scenario by modifying the AWS configuration
-//   const originalConfig = AWS.config;
-//   AWS.config.update({}); // Set an empty configuration to simulate an error
-
-//   const response = await request(app).get('/instances');
-//   expect(response.status).toBe(500);
-//   expect(response.body).toBeDefined();
-//   expect(response.body.error).toBe('Failed to fetch EC2 instances.');
-
-//   // Restore the original AWS configuration
-//   AWS.config.update(originalConfig);
-// });
-// });
+});
